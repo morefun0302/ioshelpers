@@ -3,7 +3,9 @@
  * Company: Appsolution
  * A collection of little helper tools 
  * Implement in alloy.js by using the factory methods
- * Ex: console = require("Helpers").createConsole();
+ * Ex: 
+ * var helpers = require("dk.appsolution.ioshelpers");
+ * console = helpers.createConsole();
  */
 
 /**
@@ -46,22 +48,7 @@ Console.prototype.error = function(str) {
 	this.print(str, "error");
 };
 
-/**
- * Helpers for working with XML in titanium
- */
-function XMLLib(){
-	var _this = this;	
-}
-
-XMLLib.prototype.getNodeValue = function(nodename, fallback){
-	Ti.API.info("getNodeValue");
-};
-
 // Factories
 exports.createConsole = function(){
 	return new Console();
-};
-
-exports.createXMLLib = function() {
-    return new XMLLib();
 };

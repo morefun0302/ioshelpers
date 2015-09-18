@@ -1,0 +1,4 @@
+function Console(){this.print=function(str,type){var d=new Date();var outstr=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds()+'| '+str;if(!type){}
+switch(type){case"debug":Ti.API.debug(outstr);case"error":Ti.API.error(outstr);default:Ti.API.info(outstr);}};}
+Console.prototype.log=function(str){this.print(str);};Console.prototype.out=function(str){this.print(str);};Console.prototype.debug=function(str){this.print(str,"debug");};Console.prototype.error=function(str){this.print(str,"error");};function XMLLib(){var _this=this;}
+XMLLib.prototype.getNodeValue=function(nodename,fallback){Ti.API.info("getNodeValue");};exports.createConsole=function(){return new Console();};exports.createXMLLib=function(){return new XMLLib();};
